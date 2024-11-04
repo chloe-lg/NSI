@@ -20,3 +20,19 @@ def enumere(s):
                 tab.append(i + a*64)
         a += 1
     return tab
+
+def tranche(t,i,j):
+    tab= []
+    if j <= i:
+        return []
+    for x in range(i,j):
+        tab.append(t[x])
+
+def concatenation(t1,t2):
+    t3=[]
+    for x in t1:
+        t3.append(x)
+    for x in t2:
+        return t3
+
+
