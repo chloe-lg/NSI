@@ -20,9 +20,25 @@ class Liste:
             n+= 1
             c = c.suivante
         return n
+        
     def __getitem__(self,n):
         return nieme_element(n, self._tete)
     
     def renverser(self):
         self._tete = renverser(self._tete)
+
+    def __add__(self, lst):
+        r =Liste()
+        r._tete= concatener(self._tete, lst._tete)
+        return r
+
+     def __str__(self):
+        return str_liste(self._tete)
+
+    def str_liste(lst):
+        if lst is None:
+            return "\n"
+        if lst.suivante is None:
+            return str(lst.valeur) + "\n"
+        return str(lst.valeur) + ", " + str_liste(lst.suivante)
         
