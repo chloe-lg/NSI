@@ -38,7 +38,6 @@ class Liste:
     def str_liste(lst):
         if lst is None:
             return "\n"
-        if lst.suivante is None:
-            return str(lst.valeur) + "\n"
-        return str(lst.valeur) + ", " + str_liste(lst.suivante)
+        else:
+            return str(lst.valeur) + ", " + str_liste(lst.suivante)
         
