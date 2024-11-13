@@ -57,4 +57,16 @@ def inserer(x, lst):
         return Cellule(x, lst)
     else:
         return Cellule(lst.valeur, inserer(x, lst.suivnte))
+
+def listeN(n):
+    if n == 0:
+        return None 
+    else:
+        return Cellule(n, listeN(n - 1))
+
+def liste_tableau(t):
+    if not t:
+        return None
+
+
     
