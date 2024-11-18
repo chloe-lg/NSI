@@ -20,3 +20,8 @@ h.aller_a("www.developper.com")
 h.retour()
 assert h.adress_courante == "www.stackoverflow.com"
 h.aller_a("")
+
+def retour_avant(self):
+        if not self._adresses_suivantes.est_vide():
+            self._adresses_precedentes.empiler(self.adresse_courante)
+            self.adresse_courante = self._adresses_suivantes.depiler()
