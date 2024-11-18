@@ -19,3 +19,6 @@ class Pile:
         valeur = self._contenu.valeur
         self._contenu = self._contenu.suivante
         return valeur
+    
+def cree_pile():
+    return Pile()
