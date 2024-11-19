@@ -4,7 +4,7 @@ def parenthese_correspondante(ep, f):
   p = cree_pile() 
   i = 0  
 
-  while i < len(ep): 
+  for i in range(f + 1): 
         if ep[i] == '(':
             p.empiler(i)  
         elif ep[i] == ')':
@@ -13,7 +13,6 @@ def parenthese_correspondante(ep, f):
             indice_ouvrante = p.depiler() 
             if i == f: 
                 return indice_ouvrante
-        i += 1  
 
     raise ValueError("Indice de parenthèse fermante non valide ou expression mal formée.")
   
