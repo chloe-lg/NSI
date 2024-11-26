@@ -1,4 +1,4 @@
-from pile import Pile 
+from pile import Pile, cree_pile
 
 def parenthese_correspondante(ep, f):
   p = cree_pile() 
@@ -13,8 +13,7 @@ def parenthese_correspondante(ep, f):
             indice_ouvrante = p.depiler() 
             if i == f: 
                 return indice_ouvrante
-
-    raise ValueError("Indice de parenthèse fermante non valide ou expression mal formée.")
+        raise ValueError("Indice de parenthèse fermante non valide ou expression mal formée.")
   
 ep = "(a + (b * c) + (d / e))"
 
