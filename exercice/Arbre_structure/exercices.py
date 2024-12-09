@@ -1,3 +1,5 @@
+import os
+
 class Noeud:
     def __init__(self, v, f):
         self.valeur = v
@@ -12,13 +14,22 @@ a = Noeud("A", [Noeud("B", [Noeud("D", [])]),
                             ])
                 ])
 
-def affiche(a, marge = "")
-   print(marge + a.valeur)
-   for f in a.fils:
-       affiche(f, marge + " ")
+def affiche(a, marge = ""):
+    print(marge + a.valeur)
+    for f in a.fils:
+        affiche(f, marge + " ")
 
 
-affiche(a)
-
-
+def repertoire(r):
+    b = Noeud(r, [])
+    if os.path.isdir(r) == True:
+        t = os.listdir(r)
+        for elt in t:
+          b.fils.append(repertoire(elt))
+    return b
     
+
+        
+
+x = repertoire("/Document/NSI/exercice")
+h = 1
