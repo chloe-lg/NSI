@@ -11,3 +11,16 @@ a = Noeud("A", [Noeud("B", [Noeud("D", [])]),
                             Noeud("G", []), 
                             ])
                 ])
+
+def affiche(a, marge = " ")
+   if not a:
+       return
+   print(marge + a.valeur)
+   for fils in a.fils:
+       affiche(a.fils, marge + " ")
+
+
+affiche(a)
+
+
+    
