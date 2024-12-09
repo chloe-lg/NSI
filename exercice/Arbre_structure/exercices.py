@@ -25,7 +25,8 @@ def repertoire(r):
     if os.path.isdir(r) == True:
         t = os.listdir(r)
         for elt in t:
-          b.fils.append(repertoire(elt))
+          ab = os.path.join(r, elt)
+          b.fils.append(repertoire(ab))
     return b
     
 
